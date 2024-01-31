@@ -10,6 +10,7 @@ async function getBrowser() {
 
     browser = await puppeteer.launch({
         headless: 'new',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
         defaultViewport: {
             width: 1376,
             height: 700
